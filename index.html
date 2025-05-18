@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <!-- Icon -->
+    <link rel="icon" href="./src/pic/home.png" />
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Full Tailwind -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {},
+        },
+      };
+    </script>
+    <!-- Fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- Header Start !!! -->
+    <header>
+      <!-- Navbar Start !!! -->
+      <nav
+        class="flex w-[100vw] justify-between container mx-auto items-center max-[625px]:px-4"
+      >
+        <!-- Logo -->
+        <div
+          class="logo cursor-pointer w-70 max-[1025px]:w-[250px] max-[400px]:hidden"
+        >
+          <a href="./index.html"><img src="./src/pic/logo.svg" alt="logo" /></a>
+        </div>
+        <!-- Ul List -->
+        <ul
+          class="flex gap-6 items-center *:font-[600] *:text-xl max-[1025px]:*:text-sm max-[1025px]:gap-4 max-[775px]:hidden"
+        >
+          <li>
+            <a
+              class="text-black/50 border-b-2 border-transparent hover:border-black duration-300 ease-in transition-all hover:text-black/100"
+              href="#"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              class="text-black/50 border-b-2 border-transparent hover:border-black duration-300 ease-in transition-all hover:text-black/100"
+              href="#"
+              >Products</a
+            >
+          </li>
+          <li>
+            <a
+              class="text-black/50 border-b-2 border-transparent hover:border-black duration-300 ease-in transition-all hover:text-black/100"
+              href="#"
+              >Services</a
+            >
+          </li>
+          <li>
+            <a
+              class="text-black/50 border-b-2 border-transparent hover:border-black duration-300 ease-in transition-all hover:text-black/100"
+              href="#"
+              >Contact us</a
+            >
+          </li>
+        </ul>
+        <!-- Logined User Info -->
+        <div id="user hidden"></div>
+        <!-- Login Button and Mobile Bars -->
+        <div
+          class="flex gap-4 items-center justify-center max-[400px]:justify-between max-[400px]:w-full max-[400px]:py-4"
+        >
+          <button
+            class="bg-[#003399] active:scale-90 flex gap-2 items-center justify-center text-white font-bold h-10 w-28 max-[1025px]:w-24 max-[1025px]:h-8 max-[1025px]:text-sm cursor-pointer rounded-lg border-2 border-transparent hover:bg-transparent hover:text-green-500 hover:border-green-500 duration-300 ease-out shadow-[0_0_12px_0.5px_rgba(0,0,255,0.9)] hover:shadow-[0_0_12px_1px_lime] transition-all"
+          >
+            <a href="./src/html/login.html">Login</a>
+            <i class="fa-solid fa-user"></i>
+          </button>
+          <i class="fa-solid fa-bars text-4xl hidden max-[775px]:block"></i>
+        </div>
+      </nav>
+      <!-- Navbar Finish !!! -->
+    </header>
+    <!-- Header Finish !!! -->
+
+    <!-- Sliders Start -->
+    <section class="relative overflow-hidden w-[100%] max-w-[1535px] mx-auto">
+      <!-- Sliders Images -->
+      <div class="carousel-inner flex transition-all duration-700 w-[100%]">
+        <div class="w-[100%] flex-shrink-0">
+          <img src="./src/pic/img_1.png" class="w-[100%]" alt="img 1" />
+        </div>
+        <div class="w-[100%] flex-shrink-0">
+          <img src="./src/pic/img_2.png" class="w-[100%]" alt="img 1" />
+        </div>
+        <div class="w-[100%] flex-shrink-0">
+          <img src="./src/pic/img_3.png" class="w-[100%]" alt="img 1" />
+        </div>
+      </div>
+
+      <!-- Slider Buttons -->
+      <div>
+        <button
+          class="back absolute left-4 top-1/2 -translate-y-1/2 text-5xl text-[#003399] z-10 active:scale-90 transition"
+        >
+          <i class="fa-solid fa-arrow-left"></i>
+        </button>
+        <button
+          class="next absolute right-4 top-1/2 -translate-y-1/2 text-5xl text-[#003399] z-10 active:scale-90 transition"
+        >
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+
+      <!-- Slider Lorem -->
+      <div
+        class="absolute items-start left-10 bottom-10 text-white backdrop-blur-lg bg-black/30 p-6 rounded-2xl flex flex-col gap-2 max-[1224px]:hidden"
+      >
+        <h2 class="text-3xl">Lorem ipsum dolor sit amet!</h2>
+        <p class="text-xs w-60">
+          lorem ipsum dolor sit amet. de developer is prgramming
+        </p>
+        <a
+          href="#shop"
+          class="bg-[#003399] px-5 py-2 rounded-lg border-2 border-transparent duration-300 ease-out active:scale-90 hover:bg-transparent hover:text-[#003399] hover:border-[#003399]"
+          >Go Shopping</a
+        >
+      </div>
+    </section>
+    <!-- Sliders Finish -->
+
+    <!-- Timer Start -->
+    <section class="relative max-w-[1535px] mx-auto">
+      <img src="./src/pic/timer_bg.png" alt="img" />
+      <h2
+        class="time absolute left-20 top-[50%] translate-y-[-50%] text-9xl text-white font-semibold max-[925px]:text-6xl max-[525px]:text-4xl max-[525px]:left-5 max-[280px]:text-2xl max-[280px]:left-2"
+      >
+        00:00:00
+      </h2>
+    </section>
+    <!-- Timer Finish -->
+
+    <!-- Products Start -->
+    <section class="w-full flex flex-col items-center justify-center">
+      <h2
+        class="text-center text-6xl my-[50px] font-semibold max-[435px]:text-4xl max-[435px]:my-[15px]"
+      >
+        Products
+      </h2>
+      <div
+        class="card-box grid min-[1535px]:grid-cols-4 min-[1165px]:grid-cols-3 min-[425px]:grid-cols-2 min-[1px]:grid-cols-1  gap-6 px-8 justify-items-center"
+      ></div>
+    </section>
+    <!-- Products Finish -->
+
+    <script src="./src/js/app.js"></script>
+  </body>
+</html>
