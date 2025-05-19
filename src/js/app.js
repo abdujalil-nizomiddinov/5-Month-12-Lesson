@@ -1,13 +1,7 @@
 const $ = (e) => document.querySelector(e);
 const $$ = (es) => document.querySelectorAll(es);
 
-const time = $(".time");
-const next = $(".next");
-const prev = $(".back");
-const carousel = $(".carousel-inner");
-
-const max = 3;
-let activeIndex = 0;
+// Timer
 const discountSeconds = 12 * 3600 + 25 * 60 + 32;
 
 if (!localStorage.getItem("discountStart")) {
@@ -15,6 +9,7 @@ if (!localStorage.getItem("discountStart")) {
   localStorage.setItem("discountStart", startTime);
 }
 let timer;
+const time = $(".time");
 
 function updateTimer() {
   const startTime = parseInt(localStorage.getItem("discountStart"), 10);
@@ -42,6 +37,15 @@ function updateTimer() {
 
 timer = setInterval(updateTimer, 700);
 updateTimer();
+// Timer
+
+// Carousel
+const next = $(".next");
+const prev = $(".back");
+const carousel = $(".carousel-inner");
+
+const max = 3;
+let activeIndex = 0;
 
 next.addEventListener("click", () => {
   activeIndex = (activeIndex + 1) % max;
@@ -61,7 +65,9 @@ setInterval(() => {
 const animate = () => {
   carousel.style.transform = `translateX(-${activeIndex * 100}%)`;
 };
+// Carousel
 
+// CardBox
 const cardBox = document.querySelector(".card-box");
 
 fetch("https://dummyjson.com/products")
@@ -115,3 +121,18 @@ fetch("https://dummyjson.com/products")
         `;
     });
   });
+// CardBox
+
+//   fetch('https://dummyjson.com/auth/login', {
+//   method: 'POST',
+//   headers: { 'Content-Type': 'application/json' },
+//   body: JSON.stringify({
+
+//     username: 'emilys',
+//     password: 'emilyspass',
+//     expiresInMins: 30, // optional, defaults to 60
+//   }),
+//   credentials: 'include' // Include cookies (e.g., accessToken) in the request
+// })
+// .then(res => res.json())
+// .then(console.log);
